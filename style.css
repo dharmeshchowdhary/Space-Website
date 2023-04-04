@@ -68,6 +68,18 @@ main{
     flex-direction: column;
     justify-content: space-between;
 }
+.grid-container-item:hover .card-footer > img{
+    animation: arrow 0.2s 1 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes arrow {
+    0%{
+    }
+    100%{
+        transform: translateX(1rem)
+    } 
+}
+
 .content{
     background-color: transparent;
     padding: 1.5rem 1.5rem;
@@ -121,14 +133,19 @@ main{
 
 .card-footer{
     display: flex;
-    flex-direction: column;
     background-color: transparent;
     border-top: 1px solid rgb(52,36,21);
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    align-items: center;
 }
 .card-footer text{
     background-color: transparent;
     color: rgb(52,36,21);
-    padding: 1.5rem 2.5rem;
+}
+.card-footer img{
+    background-color: transparent;
+    width: 2rem;
 }
 
 .grid-container-black-hole{
@@ -181,7 +198,7 @@ main{
 }
 .black-hole-img{
     background-color: transparent;
-    width: 90%;
+    /* width: 90%; */
     border-radius: 2rem;
     object-fit: cover;
     overflow: hidden;
@@ -196,10 +213,111 @@ main{
 
 
 
-.grid-container-portrait{
+.grid-container-astronaut {
     background-color: rgb(151,108,84);
+}
+.astronaut-img-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.astronaut-img{
+    width: 90%;
+    height: 20vh;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+.astronaut-img > img{
+    transition: transform 1s;
+}
+.grid-container-astronaut:hover .astronaut-img > img{
+    transform: scale(1.2);
+}
+
+.grid-container-astronaut .title{
+    padding: 0 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.grid-container-astronaut p{
+    background-color: transparent;
+    color: rgb(52,36,21);
+    padding:2rem
+}
+.grid-container-astronaut h1{
+    color: rgb(52,36,21);
+    font-weight: 800;
+    background-color: transparent;
+}
+.circle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.circle-container .circle{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(52,36,21);
+    border-radius: 2rem;
 }
 
 .grid-container-painting{
     background-color: rgb(181,163,141);
+    display: flex;
+    flex-direction: column;
+}
+.capsule-dp-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+.capsule{
+    background-color: transparent;
+}
+.capsule text{
+    background-color: transparent;
+    color: rgb(52,36,21);
+    border: 1px solid rgb(52,36,21);
+    border-radius: 2rem;
+    padding: 0rem 0.3rem;
+    display: inline-block;
+    justify-content: center;
+    align-content: auto;
+}
+.dp{
+    background-color: transparent;
+}
+.dp img{
+    border-radius: 5rem;
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: transparent;
+}
+.earth-title{
+    background-color: transparent;
+    color: rgb(52,36,21);
+}
+.earth-title h1, .earth-p p{
+    background-color: transparent;
+}
+.earth-p{
+    color: rgb(52,36,21);
+    background-color: transparent;
+}
+.dp{
+    border-radius: 1.5rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+.dp > img{
+    transition: transform 1s;
+}
+.grid-container-painting:hover .dp > img{
+    transform: scale(1.2);
 }
