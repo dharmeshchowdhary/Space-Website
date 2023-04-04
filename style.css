@@ -321,3 +321,33 @@ main{
 .grid-container-painting:hover .dp > img{
     transform: scale(1.2);
 }
+
+
+.mobile{
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    *{
+        font-size: 10px;
+    }
+    .laptop-desktop{
+        display: none;
+    }    
+    .mobile{
+        width: 100%;
+        display: block;
+    }
+    .mobile .container-nav-left{
+        justify-content: space-between;
+    }
+    .mobile .text{
+        width: 60vw;
+    }
+
+    .grid-container{
+        display: grid;
+    }
+    .grid-container-item{
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
